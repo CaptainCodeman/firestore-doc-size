@@ -1,0 +1,59 @@
+{
+	"name": "firestore-doc-size",
+	"description": "Calculates the storage size of a firestore document",
+	"version": "0.0.1",
+	"type": "module",
+	"homepage": "https://github.com/captaincodeman/firestore-doc-size",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/captaincodeman/firestore-doc-size.git"
+	},
+	"author": {
+		"name": "Simon Green",
+		"email": "simon@captaincodeman.com",
+		"url": "https://www.captaincodeman.com/"
+	},
+	"exports": {
+		"./firebase": {
+			"types": "./dist/firebase/index.d.ts",
+			"import": "./dist/firebase/index.js"
+		},
+		"./firebase.server": {
+			"types": "./dist/firebase.server/index.d.ts",
+			"import": "./dist/firebase.server/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"typesVersions": {
+		"*": {
+			"firebase": [
+				"./dist/firebase/index.d.ts"
+			],
+			"firebase.server": [
+				"./dist/firebase.server/index.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"firestore",
+		"storage",
+		"size",
+		"bytes"
+	],
+	"scripts": {
+		"build": "tsup"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.3",
+		"tslib": "^2.4.1",
+		"tsup": "^6.6.3",
+		"typescript": "^4.9.3"
+	},
+	"dependencies": {
+		"firebase": "^9.17.2",
+		"firebase-admin": "^11.5.0"
+	}
+}
